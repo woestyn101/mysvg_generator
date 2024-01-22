@@ -1,38 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1705938542907" clover="3.2.0">
-  <project timestamp="1705938542907" name="All files">
-    <metrics statements="20" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7" elements="27" coveredelements="27" complexity="0" loc="20" ncloc="20" packages="1" files="4" classes="4"/>
+<coverage generated="1705951103652" clover="3.2.0">
+  <project timestamp="1705951103652" name="All files">
+    <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7" elements="19" coveredelements="19" complexity="0" loc="12" ncloc="12" packages="1" files="4" classes="4"/>
     <file name="circle.js" path="E:\bootcamp\svg_generator\lib\circle.js">
-      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-      <line num="7" count="2" type="stmt"/>
-      <line num="8" count="2" type="stmt"/>
-      <line num="13" count="2" type="stmt"/>
-      <line num="22" count="1" type="stmt"/>
-      <line num="23" count="1" type="stmt"/>
-      <line num="24" count="1" type="stmt"/>
-      <line num="25" count="1" type="stmt"/>
-      <line num="26" count="1" type="stmt"/>
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
     </file>
     <file name="shape.js" path="E:\bootcamp\svg_generator\lib\shape.js">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="3" count="5" type="stmt"/>
-      <line num="4" count="5" type="stmt"/>
-      <line num="5" count="5" type="stmt"/>
-      <line num="6" count="5" type="stmt"/>
-      <line num="7" count="5" type="stmt"/>
-      <line num="8" count="5" type="stmt"/>
+      <line num="8" count="4" type="stmt"/>
+      <line num="10" count="4" type="stmt"/>
+      <line num="12" count="4" type="stmt"/>
+      <line num="14" count="4" type="stmt"/>
+      <line num="16" count="4" type="stmt"/>
+      <line num="18" count="4" type="stmt"/>
     </file>
     <file name="square.js" path="E:\bootcamp\svg_generator\lib\square.js">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-      <line num="7" count="1" type="stmt"/>
-      <line num="8" count="1" type="stmt"/>
-      <line num="13" count="1" type="stmt"/>
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
     </file>
     <file name="triangle.js" path="E:\bootcamp\svg_generator\lib\triangle.js">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-      <line num="7" count="1" type="stmt"/>
-      <line num="8" count="1" type="stmt"/>
-      <line num="13" count="1" type="stmt"/>
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

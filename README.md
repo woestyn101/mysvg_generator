@@ -29,7 +29,7 @@ I used jest to run unit tests on the code.
 
 ## Video
 
-https://drive.google.com/file/d/1pIuGK3jQAgUx_Nr1dcStAk1rtipgtKwR/view?usp=sharing
+https://drive.google.com/file/d/1vVIiT3vckBCwF3Sz8sS7H1OQx_e-mF6x/view?usp=sharing
 
 ## Screenshot of svg files
 
