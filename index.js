@@ -1,12 +1,21 @@
 // importing modules to be used
 
 import inquirer from 'inquirer';
+// import module to validate max length input by user
+import MaxLengthInputPrompt from 'inquirer-maxlength-input-prompt';
+
+// add max lenght input functionality to inquirer
+inquirer.registerPrompt('maxlength-input', MaxLengthInputPrompt)
+
+// importing file system to write svg file
 import * as fs from'fs';
-import {Myshape} from './lib/shape.js';
-// importing shape class
+
+// importing circle  class
 import {Circle} from './lib/circle.js';
+
 // importing Triangle class
 import {Triangle} from './lib/triangle.js';
+
 // importing Square class
 import {Square} from './lib/square.js';
 
@@ -15,10 +24,12 @@ inquirer
   .prompt([
    // questions to create svg logo
     {
-        type: 'input',
+        type: 'maxlength-input',
         name: 'text',
-        message: "Type in three letters?",
-        default: ""
+        message: "Type in three characters?",
+        maxLength: 3
+        
+        
     },
     {
         type: 'input',
@@ -45,73 +56,74 @@ inquirer
     
   ]) 
   .then((answers) => {
-        // checkin which shape the user has chosen
+      // checkin which shape the user has chosen
 
         // check if the user chose circle shape
-    if (answers.shapeChoice === "circle"){
+        if (answers.shapeChoice === "circle"){
 
-      // creating a new instance of the Circle class
-      var thecircle = new Circle(answers.text, answers.textColor, answers.shapeColor);
-
-      // using user answers to output svg file
-      fs.writeFile('./examples/logo.svg', 
-     thecircle.start + thecircle.render() + thecircle.theText + thecircle.end        
-      
-     // error checking
-     , err => {
-      if (err) {
-        console.error(err);
-      } else {
-        // outputting to the console if success
-       console.log("Generated logo.svg");
-      }
-
-    });
-      
-    // check if user chose triangle
-    } else if(answers.shapeChoice === "triangle") {
-      // creating a new instance of the the triangle class
-
-      var thetriangle = new Triangle(answers.text, answers.textColor, answers.shapeColor);
-
-    // using user answers to output svg file
-     fs.writeFile('./examples/logo.svg', 
-     thetriangle.start + thetriangle.render() + thetriangle.theText + thetriangle.end   
-
-     // error checking 
-     , err => {
-      if (err) {
-        console.error(err);
-      } else {
-        // outputting to the console if success
-        console.log("Generated logo.svg");
-      }
-
-    });
-   // if circle or triangle not chosen, square will be written
-    } else {
-      // creating a new instance of the Square class
-      var thesquare = new Square(answers.text, answers.textColor, answers.shapeColor);
-
-   // using user answers to output svg file
-     fs.writeFile('./examples/logo.svg', 
-     thesquare.start + thesquare.render()  + thesquare.theText + thesquare.end       
-
-     // error checking 
-     , err => {
-      if (err) {
-        console.error(err);
-      } else {
-
-        // outputting to the console if success
-        console.log("Generated logo.svg");
-      }
-
-    });
+          // creating a new instance of the Circle class
+          var thecircle = new Circle(answers.text, answers.textColor, answers.shapeColor);
     
-    }
-
-
+          // using user answers to output svg file
+          fs.writeFile('./examples/logo.svg', 
+         thecircle.start + thecircle.render() + thecircle.theText + thecircle.end        
+          
+         // error checking
+         , err => {
+          if (err) {
+            console.error(err);
+          } else {
+            // outputting to the console if success
+           console.log("Generated logo.svg");
+          }
+    
+        });
+          
+        // check if user chose triangle
+        } else if(answers.shapeChoice === "triangle") {
+          // creating a new instance of the the triangle class
+    
+          var thetriangle = new Triangle(answers.text, answers.textColor, answers.shapeColor);
+    
+        // using user answers to output svg file
+         fs.writeFile('./examples/logo.svg', 
+         thetriangle.start + thetriangle.render() + thetriangle.theText + thetriangle.end   
+    
+         // error checking 
+         , err => {
+          if (err) {
+            console.error(err);
+          } else {
+            // outputting to the console if success
+            console.log("Generated logo.svg");
+          }
+    
+        });
+       // if circle or triangle not chosen, square will be written
+        } else {
+          // creating a new instance of the Square class
+          var thesquare = new Square(answers.text, answers.textColor, answers.shapeColor);
+    
+       // using user answers to output svg file
+         fs.writeFile('./examples/logo.svg', 
+         thesquare.start + thesquare.render()  + thesquare.theText + thesquare.end       
+    
+         // error checking 
+         , err => {
+          if (err) {
+            console.error(err);
+          } else {
+    
+            // outputting to the console if success
+            console.log("Generated logo.svg");
+          }
+    
+        });
+        
+        }
+    
+    
+        
   })
   .catch((error) => {
     if (error.isTtyError) {
