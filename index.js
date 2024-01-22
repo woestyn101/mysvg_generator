@@ -70,7 +70,7 @@ inquirer
 
 
      fs.writeFile('./examples/'+ answers.fileName +'.svg', 
-     thetriangle.start + thetriangle.triangleTag + thetriangle.theText + thetriangle.end     
+     thetriangle.start + thetriangle.render() + thetriangle.theText + thetriangle.end     
      , err => {
       if (err) {
         console.error(err);
@@ -85,7 +85,7 @@ inquirer
 
 
      fs.writeFile('./examples/'+ answers.fileName +'.svg', 
-     thesquare.start + thesquare.squareTag  + thesquare.theText + thesquare.end        
+     thesquare.start + thesquare.render()  + thesquare.theText + thesquare.end        
      
      , err => {
       if (err) {
