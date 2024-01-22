@@ -1,6 +1,8 @@
 import inquirer from 'inquirer';
 import * as fs from'fs';
 import {Myshape} from './lib/shape.js';
+import {Circle} from './lib/circle.js';
+
 
 inquirer
   .prompt([
@@ -33,32 +35,28 @@ inquirer
         message: "What shape color do you prefer?",
         default: ""
     },
-  ])
+  ]) 
   .then((answers) => {
     // Use user feedback for... whatever!!
-    var myshape = new Myshape();
-    fs.writeFile('./examples/main.svg', myshape.start + '<'+ answers.shapeChoice + ' cx="150" cy="100" r="80" fill="'+ answers.shapeColor +'" />' +
-     '<text x="150" y="125" font-size="60" text-anchor="middle" fill="' + answers.textColor + '">'+ answers.text +'</text>'+ myshape.end
-
-    , err => {
-        if (err) {
-          console.error(err);
-        } else {
-          // file written successfully
-        }
-      });
-
-
-    
+     var thecircle = new Circle(answers.text, answers.textColor, answers.shapeColor);
+     
+     fs.writeFile('./examples/main.svg', 
+     thecircle.start + thecircle.circleTag + thecircle.theText + thecircle.end    
+     
+     
+     , err => {
+      if (err) {
+        console.error(err);
+      } else {
+        // file written successfully
+      }
+    });
     console.log(answers.text);
     console.log(answers.textColor);
     console.log(answers.shapeChoice);
     console.log(answers.shapeColor);
-   
-    console.log(myshape.start);
-    console.log(myshape.end);
-
-   
+    console.log(thecircle.start);
+    console.log(thecircle.end);
   })
   .catch((error) => {
     if (error.isTtyError) {
@@ -67,3 +65,7 @@ inquirer
       // Something else went wrong
     }
   });
+  
+     
+    
+   
