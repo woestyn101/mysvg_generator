@@ -1,0 +1,18 @@
+{
+  "name": "svg_generator",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "svg generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "svg"
+  ],
+  "author": "Marius Du Plooy",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^9.2.12"
+  }
+}
