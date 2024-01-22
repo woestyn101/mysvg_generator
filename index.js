@@ -8,7 +8,7 @@ import {Square} from './lib/square.js';
 
 inquirer
   .prompt([
-    /* Pass your questions in here */
+   
     {
         type: 'input',
         name: 'text',
@@ -37,30 +37,21 @@ inquirer
         message: "What shape color do you prefer?",
         default: ""
     },
-    {
-      type: 'input',
-      name: 'fileName',
-      message: "Type a filename:",
-      default: ""
-  },
+    
   ]) 
   .then((answers) => {
-    // Use user feedback for... whatever!!
-    
+        
     if (answers.shapeChoice === "circle"){
       var thecircle = new Circle(answers.text, answers.textColor, answers.shapeColor);
 
-      console.log(thecircle.render());
-
-
-     fs.writeFile('./examples/'+ answers.fileName +'.svg', 
+      fs.writeFile('./examples/logo.svg', 
      thecircle.start + thecircle.render() + thecircle.theText + thecircle.end        
      
      , err => {
       if (err) {
         console.error(err);
       } else {
-        // file written successfully
+       console.log("Generated logo.svg");
       }
 
     });
@@ -69,13 +60,13 @@ inquirer
       var thetriangle = new Triangle(answers.text, answers.textColor, answers.shapeColor);
 
 
-     fs.writeFile('./examples/'+ answers.fileName +'.svg', 
+     fs.writeFile('./examples/logo.svg', 
      thetriangle.start + thetriangle.render() + thetriangle.theText + thetriangle.end     
      , err => {
       if (err) {
         console.error(err);
       } else {
-        // file written successfully
+        console.log("Generated logo.svg");
       }
 
     });
@@ -84,14 +75,14 @@ inquirer
       var thesquare = new Square(answers.text, answers.textColor, answers.shapeColor);
 
 
-     fs.writeFile('./examples/'+ answers.fileName +'.svg', 
+     fs.writeFile('./examples/logo.svg', 
      thesquare.start + thesquare.render()  + thesquare.theText + thesquare.end        
      
      , err => {
       if (err) {
         console.error(err);
       } else {
-        // file written successfully
+        console.log("Generated logo.svg");
       }
 
     });
@@ -99,15 +90,6 @@ inquirer
     }
 
 
-    
-     
-     
-    console.log(answers.text);
-    console.log(answers.textColor);
-    console.log(answers.shapeChoice);
-    console.log(answers.shapeColor);
-    console.log(thesquare.start);
-    console.log(thesquare.end);
   })
   .catch((error) => {
     if (error.isTtyError) {

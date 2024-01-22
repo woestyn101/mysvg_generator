@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1705938416566" clover="3.2.0">
-  <project timestamp="1705938416566" name="All files">
+<coverage generated="1705938542907" clover="3.2.0">
+  <project timestamp="1705938542907" name="All files">
     <metrics statements="20" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7" elements="27" coveredelements="27" complexity="0" loc="20" ncloc="20" packages="1" files="4" classes="4"/>
     <file name="circle.js" path="E:\bootcamp\svg_generator\lib\circle.js">
       <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
